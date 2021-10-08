@@ -1,7 +1,5 @@
 package config
 
-import "os"
-
 type AuthConfig struct {
 	AccessSecret  string
 	RefreshSecret string
@@ -9,7 +7,7 @@ type AuthConfig struct {
 
 func LoadAuthConfig() AuthConfig {
 	return AuthConfig{
-		AccessSecret:  os.Getenv("ACCESS_SECRET"),
-		RefreshSecret: os.Getenv("REFRESH_SECRET"),
+		AccessSecret:  "1122334455",
+		RefreshSecret: "445566778899",
 	}
 }

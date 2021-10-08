@@ -20,7 +20,7 @@ func Init(cfg *config.Config) *gorm.DB {
 
 	fmt.Println(dataSourceName)
 
-	db, err := gorm.Open(cfg.DB.Driver, dataSourceName)
+	db, err := gorm.Open("postgres", "host=localhost port=5432 user=postgres dbname=evermos sslmode=disable password=secret")
 	if err != nil {
 		panic(err.Error())
 	}

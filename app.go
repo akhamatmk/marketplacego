@@ -12,7 +12,8 @@ func Start(cfg *config.Config) {
 
 	routes.ConfigureRoutes(app)
 
-	err := app.Start(cfg.HTTP.Port)
+	// err := app.Start(cfg.HTTP.Port)
+	err := app.Start("5000")
 	if err != nil {
 		log.Fatal("Port already used")
 	}
